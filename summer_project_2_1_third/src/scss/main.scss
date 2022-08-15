@@ -1,0 +1,21 @@
+@import "reset.scss";
+
+// screan
+@import "screan/article.scss";
+@import "screan/comment.scss";
+@import "screan/tocomment.scss";
+@import "screan/loginhead.scss";
+
+//  anathor page
+@import "screan/login.scss";
+@import "screan/registerform.scss";
+
+body {
+  margin: 25px;
+  margin: 10px 25px 25px 25px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
