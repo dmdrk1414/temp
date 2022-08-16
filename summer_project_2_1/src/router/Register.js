@@ -14,26 +14,26 @@ const Register = () => {
         return message;
     };
 
-    function testAxios() {
-        axios({
-            url: '/backend/register',
-            method: 'post',
-            data: {
-                test: 'test@naver.com',
-                aaa: 'aaa222',
-            },
+    // function testAxios() {
+    //     axios({
+    //         url: '/backend/register',
+    //         method: 'post',
+    //         data: {
+    //             test: 'test@naver.com',
+    //             aaa: 'aaa222',
+    //         },
 
-            baseURL: 'http://localhost:8080',
-            //withCredentials: true,
-        })
-            .then(responseHandler)
-            .catch(errorHandler);
-    }
+    //         baseURL: 'http://localhost:8080',
+    //         //withCredentials: true,
+    //     })
+    //         .then(responseHandler)
+    //         .catch(errorHandler);
+    // }
 
     // http://localhost:8080/backend/cors
-    const onNonCorsHeaderHandler = () => {
-        axios.get('http://localhost:8080/backend/register').then(responseHandler).catch(errorHandler);
-    };
+    // const onNonCorsHeaderHandler = () => {
+    //     axios.get('http://localhost:8080/backend/register').then(responseHandler).catch(errorHandler);
+    // };
 
     return (
         <div className="body">
