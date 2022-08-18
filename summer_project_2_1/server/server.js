@@ -2,8 +2,10 @@
 const express = require('express');
 const app = express();
 const api = require('./routes/index');
+const backend = require('./routes/backend');
 // api 처리는 './routes/index'에서 일괄처리
 app.use('/api', api);
+app.use('/backend', backend);
 
 // server port 4000 할당
 // 클라이언트와 다른 번호로 충돌나지 않도록

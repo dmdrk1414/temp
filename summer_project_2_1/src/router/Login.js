@@ -1,6 +1,6 @@
 /* eslint-disable */ // 전체 룰 끄기
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // view
 
@@ -38,16 +38,36 @@ const Login = () => {
     // test
 
     // 서버에서 받은 데이터를 console로 찍어서 확인한다.
-    useEffect(() => {
-        axios
-            .get('/api/test')
-            .then((res) => console.log(res))
-            .catch();
-        // fetch('/api/test')
-        //     .then((res) => console.log(res.body))
-        //     .catch();
-    });
+    const [userID, setUserID] = useState('');
+    const [userPWD, setuserPWD] = useState('');
 
+    // const test = 'test';
+    // useEffect(() => {
+    //     console.log(userID);
+
+    //     axios
+    //         .post('/backend/login', {
+    //             userID,
+    //             userPWD,
+    //         })
+    //         .then((res) => console.log(res))
+    //         .catch();
+    //     // .get('/api/test')
+    //     // .then((res) => console.log(res))
+    //     // .catch();
+    //     // fetch('/api/test')
+    //     //     .then((res) => console.log(res.body))
+    //     //     .catch();
+    // }, []);
+
+    // function buttonHandler(e) {
+    //     e.preventdefault();
+    //     const idInput = document.querySelector('.login-id');
+    //     const pwdInput = document.querySelector('.login-pwd');
+    //     setUserID(idInput.value);
+    //     setuserPWD(pwdInput.value);
+    // }
+    // eslint-disable-next-line no-console
     // test
     return (
         <div className="body">
@@ -60,7 +80,7 @@ const Login = () => {
                     <div className="login-title" id="title">
                         Login
                     </div>
-                    <input defaultValue="dmdrk1414" className="login-email" type="text" name="id" placeholder="아이디 입력" autoFocus />
+                    <input defaultValue="dmdrk1414" className="login-id" type="text" name="id" placeholder="아이디 입력" autoFocus />
                     <input defaultValue="1234" className="login-pwd" type="password" name="pwd" placeholder="비밀번호" />
                     <button className="login-button">로그인</button>
                     <div>

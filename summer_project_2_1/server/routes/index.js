@@ -5,11 +5,12 @@ const express = require('express');
 const router = express();
 const db = require('../config/db');
 
-const sql = 'select * from register';
+const SQL = 'SELECT * FROM user_info';
 
 // http://localhost:4000/ 으로 접속 시 응답메시지 출력
 router.get('/test', (req, res) => {
-    db.query(sql, (err, data) => {
+    // mysql 접속하기
+    db.query(SQL, (err, data) => {
         if (!err) {
             // eslint-disable-next-line no-console
             console.log('mysql 접속완료');

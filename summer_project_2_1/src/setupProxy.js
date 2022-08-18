@@ -8,4 +8,10 @@ module.exports = function (app) {
             changeOrigin: true,
         }),
     );
+    app.use(
+        createProxyMiddleware('/backend', {
+            target: 'http://localhost:8080/', // 비즈니스 서버 URL 설정
+            changeOrigin: true,
+        }),
+    );
 };
